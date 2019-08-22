@@ -7,30 +7,13 @@
 - [Docker](https://www.docker.com/get-started)
 - [Liquibase 3.5.5](https://download.liquibase.org/download/?frm=n)
 
-## Compilación
-
-```bash
-
-cd api-manager/
-mvn clean package
-
-cd order-service/
-mvn clean package
-
-cd product-service/
-mvn clean package
-
-cd user-service/
-mvn clean package
-
-```
-
 ## Levantar DB
+
 User: postgres
 
 ```bash
 
-docker run --name postgresdb -p 5432:5432 -e POSTGRES_DB=unbound -e POSTGRES_PASSWORD=postgres123 -d postgres
+docker run --name postgresdb -p 5432:5432 -e POSTGRES_DB=catalogs -e POSTGRES_PASSWORD=postgres123 -d postgres
 
 ```
 
@@ -51,6 +34,24 @@ export PATH=/opt/liquibase-3.5.5-bin:$PATH
 
 cd liquibase/
 liquibase --changeLogFile="changesets/db.changelog-master.xml" update
+
+```
+
+
+
+```bash
+
+cd api-manager/
+mvn clean package
+
+cd order-service/
+mvn clean package
+
+cd product-service/
+mvn clean package
+
+cd user-service/
+mvn clean package
 
 ```
 
