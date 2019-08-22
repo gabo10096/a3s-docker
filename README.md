@@ -48,7 +48,7 @@ java -jar catalogos-web/target/*.jars
 ```
 ## Probar 
 
-[Swagger] (http://localhost:8090/swagger-ui.html)
+[Swagger](http://localhost:8090/swagger-ui.html)
   
 ```http
 
@@ -56,7 +56,7 @@ GET http://localhost:8090/catalogos/test
 GET http://localhost:8090/admin/users
 POST http://localhost:8090/admin/users
 PUT http://localhost:8090/admin/users
-DELETE http://localhost:8090/admin/users/{id}
+DELETE http://localhost:8090/admin/users/{{id}}
 
 ```
 
