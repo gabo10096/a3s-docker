@@ -1,0 +1,10 @@
+version: '3'
+services:
+  apicatalogs:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    ports:
+      - "8090:8090"
+    environment:
+      - TZ=America/Mexico_City

@@ -45,7 +45,7 @@ liquibase --changeLogFile="changesets/db.changelog-master.xml" update
 
 cd SpringbootCourse/
 mvn clean package -DskipTests
-java -jar catalogos-web/target/*.jars
+java -jar catalogos-web/target/*.jar
 
 ```
 ## Probar 
@@ -71,8 +71,8 @@ DELETE http://localhost:8090/admin/users/id
 
 ```bash 
 
-docker build -t api_manager -f Dockerfile-apimanager .
-docker run -d -p 8000:8000 api_manager
+docker build -t api_catalogs -f Dockerfile .
+docker run -d -p 8090:8090 api_catalogs
 
 ```
 
@@ -84,6 +84,8 @@ docker-compose up -d
 docker-compose down --rmi all      
 
 ```
+
+# Configuración de red de contenedores
 
 ## Red de contenedores 
 

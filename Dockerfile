@@ -1,5 +1,4 @@
-FROM openjdk:10-jre-slim
-VOLUME /tmp
-ENV JAR_FILE /catalogos-service/catalogos-web/target/*.jar
+FROM openjdk:8-jre-slim
+ENV JAR_FILE /SpringbootCourse/catalogos-web/target/*.jar
 ADD ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
