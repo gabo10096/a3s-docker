@@ -48,27 +48,19 @@ java -jar catalogos-web/target/*.jars
 ```
 ## Probar 
 
-### Desde Api Manager
+[Swagger] (http://localhost:8090/swagger-ui.html)
   
 ```http
 
-GET http://localhost:8000/api/orders/order/test
-GET http://localhost:8000/api/products/product/test
-GET http://localhost:8000/api/users/user/test
+GET http://localhost:8090/catalogos/test
+GET http://localhost:8090/admin/users
+POST http://localhost:8090/admin/users
+PUT http://localhost:8090/admin/users
+DELETE http://localhost:8090/admin/users/{id}
 
 ```
 
-### Directo a los servicios
-
-```http
-
-GET http://localhost:8200/order/test
-GET http://localhost:8300/product/test
-GET http://localhost:8100/user/test
-
-```
-
-[Postman Collection](https://www.getpostman.com/collections/0e7c92036c7de539b9c3)
+[Postman Collection](https://www.getpostman.com/collections/ffc69f49936c30c2c9e7)
 
 
 ## Generar los contenedores
@@ -79,33 +71,6 @@ GET http://localhost:8100/user/test
 
 docker build -t api_manager -f Dockerfile-apimanager .
 docker run -d -p 8000:8000 api_manager
-
-```
-
-# Dockerfile-orderservice
-
-```bash 
-
-docker build -t order_service -f Dockerfile-orderservice .
-docker run -d -p 8200:8200 order_service
-
-```
-
-# Dockerfile-productservice
-
-```bash 
-
-docker build -t product_service -f Dockerfile-productservice .
-docker run -d -p 8300:8300 product_service
-
-```
-
-# Dockerfile-userservice
-
-```bash 
-
-docker build -t user_service -f Dockerfile-userservice .
-docker run -d -p 8100:8100 user_service
 
 ```
 
@@ -142,6 +107,3 @@ docker network connect [NETWORK_ID] [CONTAINER_ID]
 docker network disconnect [NETWORK_ID] [CONTAINER_ID]
 
 ```
-
-
-
