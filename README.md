@@ -37,39 +37,13 @@ liquibase --changeLogFile="changesets/db.changelog-master.xml" update
 
 ```
 
-
-
-```bash
-
-cd api-manager/
-mvn clean package
-
-cd order-service/
-mvn clean package
-
-cd product-service/
-mvn clean package
-
-cd user-service/
-mvn clean package
-
-```
-
 ## Levantar servicios
 
 ```bash
 
-cd api-manager/
-java -jar target/*.jar
-
-cd order-service/
-java -jar order-web/target/*.jar
-
-cd product-service/
-java -jar product-web/target/*.jar
-
-cd user-service/
-java -jar user-web/target/*.jar
+cd SpringbootCourse/
+mvn clean package -DskipTests
+java -jar catalogos-web/target/*.jars
 
 ```
 ## Probar 

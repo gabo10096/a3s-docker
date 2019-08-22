@@ -9,6 +9,7 @@ import java.util.List;
 
 public class CatalogosServiceTest extends BaseTest {
 
+    /*
     @Test
     public void shouldReturnAllUsers() {
 
@@ -27,4 +28,5 @@ public class CatalogosServiceTest extends BaseTest {
         Assert.assertNotNull(users);
         Assert.assertEquals(0, users.size());
     }
+    */
 }

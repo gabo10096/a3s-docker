@@ -8,6 +8,7 @@ import java.util.List;
 
 public class CatalogosFacadeTest extends BaseTest {
 
+    /*
     @Test
     public void shouldReturnAllUsers() {
 
@@ -15,4 +16,5 @@ public class CatalogosFacadeTest extends BaseTest {
         Assert.assertNotNull(users);
         Assert.assertEquals(1, users.size());
     }
+    */
 }

@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5430/dbcourse
+    url: jdbc:postgresql://localhost:5432/catalogs
     username: postgres
-    password: cursoMicro2019
+    password: postgres123
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
@@ -14,13 +14,3 @@ spring:
 
 server:
   port: 8090
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:8000/eureka
-  instance:
-    leaseRenewalIntervalInSeconds: 5
-    preferIpAddress: true
