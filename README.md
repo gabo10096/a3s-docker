@@ -7,6 +7,8 @@
 - [Docker](https://www.docker.com/get-started)
 - [Liquibase 3.5.5](https://download.liquibase.org/download/?frm=n)
 
+# Configuración
+
 ## Levantar DB
 
 User: postgres
@@ -37,7 +39,7 @@ liquibase --changeLogFile="changesets/db.changelog-master.xml" update
 
 ```
 
-## Levantar servicios
+## Levantar API
 
 ```bash
 
@@ -48,7 +50,7 @@ java -jar catalogos-web/target/*.jars
 ```
 ## Probar 
 
-[Swagger](http://localhost:8090/swagger-ui.html)
+[Swagger UI](http://localhost:8090/swagger-ui.html)
   
 ```http
 
@@ -56,16 +58,16 @@ GET http://localhost:8090/catalogos/test
 GET http://localhost:8090/admin/users
 POST http://localhost:8090/admin/users
 PUT http://localhost:8090/admin/users
-DELETE http://localhost:8090/admin/users/{{id}}
+DELETE http://localhost:8090/admin/users/id
 
 ```
 
 [Postman Collection](https://www.getpostman.com/collections/ffc69f49936c30c2c9e7)
 
 
-## Generar los contenedores
+# Generar los contenedores
 
-# Dockerfile-apimanager
+## Dockerfile
 
 ```bash 
 
@@ -74,7 +76,7 @@ docker run -d -p 8000:8000 api_manager
 
 ```
 
-## Generar docker-compose
+## docker-compose
 
 ```bash 
 
